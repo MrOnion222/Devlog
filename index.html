@@ -12,15 +12,20 @@
   const password1 = atob("YXlzbGFucGFzc3dvcmQ=");
   const password2 = atob("MDcxMDEy");
 
-  // pergunta a senha
+  const isDev =
+  (
+    location.protocol === "file:"
+  );
+
+if(!isDev)
+{
   const input = prompt("Senha:");
 
-  // se estiver errada
   if(input !== password1 && input !== password2)
   {
-    // bloqueia o site
     window.location.href = "deined.html";
   }
+}
 </script>
 
 <body>
@@ -28,32 +33,37 @@
   <div class="main">
     <h1>MrOnion's Devlog</h1>
     <h2>Diário de desenvolvimento do MrOnion</h2>
-  </div>
     
     <br><br><br>
-    
-  <div class="main">
-    <a href="insanebombs.html">
 
-    <div class="image-with-caption">
-      <img class="pixel" src="imgs/Insanebombs.gif" alt="Insanebombs">
-      </a>
+    <div class="captions">
+      <div class="caption">
+        <a href="insanebombs.html">
+        <img class="pixel" src="imgs/Insanebombs.gif" alt="Insanebombs">
+        </a>
 
-      <br><br>
+        <p>Insanebombs</p>
+      </div>
 
-      <p class="caption">Insanebombs</p>
-    
+      <div class="caption">
+        <a href="index.html">
+        <img class="pixel" src="imgs/the-mask-s-adventure.png" alt="Insanebombs">
+        </a>
+
+        <p>The Mask's Adventure</p>
+      </div>
     </div>
-    </div>
+
+  </div>
 
 </body>
-<nav class="side-menu">
+<div class="side-menu">
   <a
     href="https://www.youtube.com/@AyslanNuness"
     target="_blank"
     aria-label="YouTube Channel"
   >
-    <img src="imgs/yt_logo.png" alt="YouTube" width="96" height="96">
+    <img src="imgs/yt_logo.png" alt="YouTube">
   </a>
-</nav>
+</div>
 </html>
