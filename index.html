@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MrOnion's Devlog</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icon.png">
+</head>
+
+<script>
+  // senha correta
+  const password1 = atob("YXlzbGFucGFzc3dvcmQ=");
+  const password2 = atob("MDcxMDEy");
+
+  // pergunta a senha
+  const input = prompt("Senha:");
+
+  // se estiver errada
+  if(input !== password1 && input !== password2)
+  {
+    // bloqueia o site
+    window.location.href = "deined.html";
+  }
+</script>
+
+<body>
+
+  <div class="main">
+    <h1>MrOnion's Devlog</h1>
+    <h2>Diário de desenvolvimento do MrOnion</h2>
+  </div>
+    
+    <br><br><br>
+    
+  <div class="main">
+    <a href="insanebombs.html">
+
+    <div class="image-with-caption">
+      <img class="pixel" src="imgs/Insanebombs.gif" alt="Insanebombs">
+      </a>
+
+      <br><br>
+
+      <p class="caption">Insanebombs</p>
+    
+    </div>
+    </div>
+
+</body>
+<nav class="side-menu">
+  <a
+    href="https://www.youtube.com/@AyslanNuness"
+    target="_blank"
+    aria-label="YouTube Channel"
+  >
+    <img src="imgs/yt_logo.png" alt="YouTube" width="96" height="96">
+  </a>
+</nav>
+</html>

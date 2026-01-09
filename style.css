@@ -1,0 +1,114 @@
+@font-face
+{
+  font-family: 'Pixel Font';
+  src: url("fonts/PressStart2P.ttf") format('truetype');
+  font-weight: normal;
+}
+
+
+body
+{
+    background-color: #0f222e;
+    color: #ffffff;
+    font-family: 'Pixel Font';
+    font-size: 16px;
+    margin: 5vw;
+    margin-top: 64px;
+}
+
+.pixel
+{
+    image-rendering: pixelated;
+}
+
+a
+{
+    color:#d9ff00;
+
+    img
+    {
+        scale: 100%;
+        transition: scale 0.15s;
+    }
+
+    img:hover
+    {
+        scale: 110%;
+    }
+}
+
+a:hover
+{
+    color:aqua;
+}
+
+strong
+{
+    color: #ff9100;
+    font-size: 24px;
+}
+
+h1
+{
+    text-align: center;
+    font-size: 24px;
+}
+
+h2
+{
+    text-align: center;
+    font-size: 16px;
+}
+
+.log
+{
+    img
+    {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 70vw;
+        max-height: 70vh;
+    }
+
+    p
+    {
+        margin-top: 128px;
+        margin-bottom: 32px;
+    }
+}
+
+.image-with-caption
+{
+    
+    background-color: #0a141a; /* tom escuro */
+    margin-left: 256px;
+    padding: 32px;
+
+    display: inline-block;
+    border-radius: 24px
+}
+
+.caption
+{
+    text-align: center;
+    font-size: 16px;
+}
+
+.side-menu
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 164px;
+  height: 100vh;
+
+  background-color: #08141a;
+
+  display: flex;
+  justify-content: center;
+  padding-top: 120px;
+
+  z-index: 1000;
+}
