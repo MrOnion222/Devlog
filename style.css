@@ -12,9 +12,10 @@ body
     color: #ffffff;
     font-family: 'Pixel Font';
     font-size: 24px;
-    margin: 4vw;
-    margin-left: 19vw;
-    margin-top: 64px;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    padding-right: 5vw;
+    padding-left: min(20vw,200px + 5vw);
 }
 
 .pixel
@@ -81,14 +82,23 @@ h2
 
 .captions
 {
-    display: flex;
+    display: grid;
     justify-content: center;
+    justify-items:center;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-rows: 360px;
+    gap: 80px;
 }
+
+
+
 
 .caption
 {
+    width: 340px;
+    height: 340px;
+
     background-color: #0a141a; /* tom escuro */
-    margin: 16px;
     padding: 32px;
     border-radius: 32px;
 
@@ -96,14 +106,22 @@ h2
 
     img
     {
-        display: block;
+        display: flexbox;
 
-        margin-left: auto;
-        margin-right: auto;
+        justify-self: center;
     }
 
     text-align: center;
     font-size: 24px;
+
+    transition: all 0.15s;
+}
+
+.caption:hover
+{
+    scale: 1.1;
+    border-radius: 48px;
+    background-color:#173242;
 }
 
 .side-menu
