@@ -17,9 +17,9 @@
     location.protocol === "file:"
   );
 
-if(!isDev)
+if(false)
 {
-  const input = prompt("Senha:");
+  const input  = prompt("Senha:");
 
   if(input !== password1 && input !== password2)
   {
@@ -57,12 +57,18 @@ if(!isDev)
 
 </body>
 <div class="side-menu">
-  <a
-    href="https://www.youtube.com/@AyslanNuness"
-    target="_blank"
-    aria-label="YouTube Channel"
-  >
-    <img src="imgs/yt_logo.png" alt="YouTube">
+  <a href="https://www.youtube.com/@AyslanNuness" target="_blank" aria-label="YouTube Channel">
+    <div class="menu">
+      <img src="imgs/yt_logo.png" alt="YouTube">
+      <p>Youtube</p>
+    </div>
+  </a>
+
+  <a href="https://mr-onion-games.itch.io" target="_blank" aria-label="Itch io">
+    <div class="menu">
+      <img src="imgs/itch_io_logo.png" alt="Itch io">
+      <p>Itch io</p>
+    </div>
   </a>
 </div>
 </html>
