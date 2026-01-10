@@ -67,6 +67,38 @@ h2
     }
 }
 
+.center-btn
+{
+    width: auto;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.download-button
+{
+    background-color: #08141a;
+    font-family: 'Pixel Font';
+    font-size: 24px;
+    color: #09ff00;
+    text-shadow: #0000006b 0px 4px;
+    padding: 32px;
+
+    margin: 8px 0px;
+
+    border-radius: 32px;
+    cursor: pointer;
+
+    transition: scale 0.15s, background-color 0.15s;
+}
+
+.download-button:hover
+{
+    scale: 110%;
+    background-color: #173242;
+}
+
 .captions
 {
     display: grid;
