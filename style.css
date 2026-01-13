@@ -48,7 +48,7 @@ a:hover {
 
 strong {
     color: #ff9100;
-    font-size: 32px;
+    font-size: 48px;
 }
 
 h1 {
@@ -75,6 +75,8 @@ h2 {
 }
 
 .log p {
+    font-size: 36px;
+
     margin-top: 128px;
     margin-bottom: 32px;
 }
