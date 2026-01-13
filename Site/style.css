@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'Pixel Font';
+    src: url("fonts/PressStart2P.ttf") format('truetype');
+}
+
+/* ---------- RESET BÁSICO ---------- */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: #0f222e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ---------- GLOBAL ---------- */
+
+body {
+    color: #ffffff;
+    font-family: 'Pixel Font';
+    font-size: 24px;
+
+    padding-bottom: 5vw;
+    padding-right: 5vw;
+    padding-left: clamp(200px, 20vw, 300px);
+}
+
+.pixel {
+    image-rendering: pixelated;
+}
+
+/* ---------- LINKS ---------- */
+
+a {
+    color: #d9ff00;
+    text-decoration: none;
+}
+
+a:hover {
+    color: aqua;
+}
+
+/* ---------- TEXTO ---------- */
+
+strong {
+    color: #ff9100;
+    font-size: 48px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* ---------- LOG ---------- */
+
+.log img {
+    display: block;
+    margin: auto;
+    max-width: 70vw;
+    max-height: 70vh;
+}
+
+.log p {
+    font-size: 36px;
+
+    margin-top: 128px;
+    margin-bottom: 32px;
+}
+
+/* ---------- BOTÃO ---------- */
+
+.center-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.download-button {
+    background-color: #08141a;
+    font-family: 'Pixel Font';
+    font-size: 24px;
+    color: #09ff00;
+
+    text-shadow: 0 4px 0 #0000006b;
+    padding: 32px;
+    margin: 16px 0;
+
+    border-radius: 32px;
+    cursor: pointer;
+
+    transition: transform 0.15s, background-color 0.15s;
+}
+
+.download-button:hover {
+    transform: scale(1.1);
+    background-color: #173242;
+}
+
+/* ---------- CAPTIONS ---------- */
+
+.captions {
+
+    --size: clamp(320px,25vw,720px);
+
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    
+    grid-template-rows: repeat(auto-fit, var(--size));
+    grid-template-columns: repeat(auto-fit, var(--size));
+
+    gap: 56px;
+}
+
+.caption {
+
+    width: var(--size);
+    height: var(--size);
+
+    background-color: #0a141a;
+    padding: 48px;
+    border-radius: 15%;
+
+    box-shadow: 0 0 16px #00000086;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    text-align: center;
+    font-size: 24px;
+
+    transition: background-color 0.15s, box-shadow 0.15s;
+}
+.caption img
+{
+    width:45%
+}
+
+.caption:hover {
+    background-color: #173242;
+    box-shadow: 0 0 24px #ffffff;
+}
+
+/* ---------- SIDE MENU ---------- */
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: grid;
+    gap: 96px;
+
+    grid-template-rows: repeat(auto-fit,fit-content);
+    grid-template-columns: auto;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    width: clamp(160px, 15vw, 200px);
+    height: 100vh;
+
+    background-color: #08141a;
+
+    z-index: 1000;
+}
+
+.side-menu img {
+    width: 8vw;
+    max-width: 105px;
+    max-height: 105px;
+}
+
+/* ---------- MENU ITEMS ---------- */
+
+.menu {
+    background-color: #0000003f;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: clamp(100px, 12vw, 150px);
+    height: clamp(100px, 12vw, 150px);
+
+    padding: 4px;
+    border-radius: 32px;
+
+    box-shadow: 0 0 0 transparent;
+
+    text-align: center;
+    font-size: 12px;
+
+    transition: box-shadow 0.15s;
+}
+
+.menu:hover {
+    box-shadow: 0 0 24px #ffffff4f;
+}
+
+/* ------------------------------------ Geral ------------------------------------ */
+
+@media (hover: none),
+(pointer: coarse)
+/* Mobile */
+    {
+    html {
+        transition: none;
+    }
+}

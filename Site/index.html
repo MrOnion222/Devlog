@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MrOnion's Devlog</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icon.png">
+</head>
+
+<script>
+  // senha correta
+  const password1 = atob("YXlzbGFucGFzc3dvcmQ=");
+  const password2 = atob("MDcxMDEy");
+
+  const isDev =
+  (
+    location.protocol === "file:"
+  );
+
+if(false)
+{
+  const input  = prompt("Senha:");
+
+  if(input !== password1 && input !== password2)
+  {
+    window.location.href = "deined.html";
+  }
+}
+</script>
+
+<body>
+
+  <div class="main">
+    <h1>MrOnion's Devlog</h1>
+    <h2>Diário de desenvolvimento do MrOnion</h2>
+    
+    <br><br><br>
+
+    <div class="captions">
+      <a href="insanebombs.html">
+        <div class="caption">
+        <img class="pixel" src="imgs/Insanebombs.gif" alt="Insanebombs">
+        <p>Insanebombs</p>
+        </div>
+      </a>
+
+      <a href="index.html">
+        <div class="caption">
+        <img class="pixel" src="imgs/the-mask-s-adventure.png" alt="Insanebombs">
+        <p>The Mask's Adventure</p>
+        </div>
+      </a>
+      
+    </div>
+
+  </div>
+
+</body>
+<div class="side-menu">
+  <a href="https://www.youtube.com/@AyslanNuness" target="_blank" aria-label="YouTube Channel">
+    <div class="menu">
+      <img src="imgs/yt_logo.png" alt="YouTube">
+      <p>Youtube</p>
+    </div>
+  </a>
+
+  <a href="https://mr-onion-games.itch.io" target="_blank" aria-label="Itch io">
+    <div class="menu">
+      <img src="imgs/itch_io_logo.png" alt="Itch io">
+      <p>Itch io</p>
+    </div>
+  </a>
+</div>
+</html>
