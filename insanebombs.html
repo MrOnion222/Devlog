@@ -8,10 +8,48 @@
   <link rel="icon" href="icon.png">
 </head>
 
+<script>
+  function diasDesde(dataTexto) {
+    // Separa dia, mês e ano da string "DD/MM/YYYY"
+    const partes = dataTexto.split("/");
+
+    const dia = Number(partes[0]);
+    const mes = Number(partes[1]) - 1; // meses começam em 0
+    const ano = Number(partes[2]);
+
+    // Cria a data inicial
+    const dataInicial = new Date(ano, mes, dia);
+
+    // Data atual
+    const hoje = new Date();
+
+    // Diferença em milissegundos
+    const diferencaMs = hoje - dataInicial;
+
+    // Converte milissegundos para dias
+    const dias = Math.floor(diferencaMs / (1000 * 60 * 60 * 24));
+
+    return dias;
+  }
+</script>
+
 <body>
   <div class="log">
 
-    <p><strong>15/01/2026</strong><br>Estou finalizando o ato 1...</p>
+    <div class="day-count">
+      <P id="day-count"></P>
+    </div>
+
+    <p><strong>16/01/2026</strong><br>
+      Estou planejando o level design do ato 2...<br>
+      Adicionei um medidor de força de arremesso para bombas que o player joga.</p>
+
+    <p><strong>15/01/2026</strong><br>
+      Estou finalizando o ato 1...<br>
+      Adicionei uma mecânica de escuridão: quando o player entra em seções ou corredores escuros,
+      o quanto mais próximo da fonte de escuridão (configurável, podendo ser no começo, meio ou fim) mais escura ficará
+      a tela.<br>
+      Adicionei uma medidor de recarregamento de bomba na hud.</p>
 
     <p><strong>13/01/2026 parte 2</strong><br>Boa tarde, senhores. Hoje deixei o level design do ato 1 mais fácil,
       apliquei o
@@ -45,10 +83,10 @@
       (objeto machucável), os espinhos.
     </p>
 
-    <img src="download/Fire Spikes.png" alt="mola amarela">
+    <img src="download/Fire Spikes.gif" alt="mola amarela">
 
     <div class="center-btn">
-      <a href="download/Fire Spikes.png" download>
+      <a href="download/Fire Spikes.gif" download>
         <button class="download-button">Baixar sprite</button>
       </a>
     </div>
@@ -56,10 +94,10 @@
     <p><strong>10/01/2026</strong><br>Fiz um sprite de mola inspirado em sonic mania e implementei-o no jogo e ajustei o
       level design da primeira parte do ato 1. Pode parecer pouco, mas demora muito...</p>
 
-    <img src="download/Yellow Spring.png" alt="mola amarela">
+    <img src="download/Yellow Spring.gif" alt="mola amarela">
 
     <div class="center-btn">
-      <a href="download/Yellow Spring.png" download>
+      <a href="download/Yellow Spring.gif" download>
         <button class="download-button">Baixar sprite</button>
       </a>
     </div>
@@ -81,7 +119,8 @@
       parede quebrável.</p>
     <img src="imgs/death_scene.gif" alt="cena de morte">
 
-    <p><strong>07/01/2026</strong><br>A cada dia que passa eu fico mais ansioso para o fim dessa gamejam, para ver o jogo
+    <p><strong>07/01/2026</strong><br>A cada dia que passa eu fico mais ansioso para o fim dessa gamejam, para ver o
+      jogo
       completo, compartilhar com os meus amigos e para aprender mais
       iniciando novos projetos (e ganhar dinheiro, quem sabe né?). Hoje fiz uma imagem com o conceito do level design
       para a segunda parte do ato 1, eu não aguento mais!.</p>
@@ -115,18 +154,25 @@
     <p><strong>02/01/2026</strong><br>Countinuo a fazer o level design, não aguento mais!
       Por que que fazer fases em jogos feitos para isso como Super Mario Maker é legal, mas construir as fases do meu
       próprio jogo não? Isso não faz sentido!</p>
+
+    <p><strong>23/12/2025</strong><br> Início do projeto...</p>
   </div>
 </body>
+
+<script>
+  document.getElementById("day-count").innerText = (diasDesde("23/12/2025") + " dias de projeto...\n"+(Math.abs((diasDesde("23/01/2026"))))+" dias para a gamejam finalizar...");
+</script>
+
 <div class="side-menu">
   <a href="https://www.youtube.com/@AyslanNuness" target="_blank" aria-label="YouTube Channel">
-    <div class="menu">
+    <div class="menu" style="--box-color: #DD2C28;">
       <img src="imgs/yt_logo.png" alt="YouTube">
       <p>Youtube</p>
     </div>
   </a>
 
   <a href="https://mr-onion-games.itch.io" target="_blank" aria-label="Itch io">
-    <div class="menu">
+    <div class="menu" style="--box-color: rgb(250, 92, 92);">
       <img src="imgs/itch_io_logo.png" alt="Itch io">
       <p>Itch io</p>
     </div>

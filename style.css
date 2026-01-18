@@ -76,6 +76,10 @@ h2 {
 }
 
 .log img {
+    background: #050a0c;
+    padding: 48px;
+    border-radius: 32px;
+
     display: block;
     margin: auto;
     max-width: 70vw;
@@ -94,37 +98,51 @@ h2 {
 
 /* ---------- BOTÃO ---------- */
 
-.center-btn {
-    display: flex;
-    justify-content: center;
-}
-
 .download-button {
+
+    display: flex;
+
+    justify-self: center;
+    justify-content: center;
+
     background-color: #08141a;
+
     font-family: 'Pixel Font';
     font-size: 24px;
     color: #09ff00;
 
+    border-style: groove;
+    border-color: #ffff00;
+
+    width:100%;
+
     text-shadow: 0 4px 0 #0000006b;
     padding: 32px;
-    margin: 16px 0;
+    margin: 32px;
 
     border-radius: 32px;
     cursor: pointer;
 
-    transition: transform 0.15s, background-color 0.15s;
-}
+    box-shadow: #ffffff 0 0 0;
 
+
+    transition:
+    background .15s,
+    color .15s,
+    border .15s;
+}
 .download-button:hover {
-    transform: scale(1.1);
-    background-color: #173242;
+    background: #173242;
+
+    color: #ffff00;
+    border-color: #00ff00;
 }
 
 /* ---------- CAPTIONS ---------- */
 
 .captions {
 
-    --size: 480px;
+    --size: 560px;
 
     display: grid;
     justify-content: center;
@@ -218,11 +236,41 @@ h2 {
     text-align: center;
     font-size: 12px;
 
-    transition: box-shadow 0.15s;
+    border: rgba(0, 0, 0, 0) solid 0px;
+
+    transition:
+    box-shadow .2s,
+    border .1s,
+    background .2s;
+}
+
+.menu p {
+    color: white;
 }
 
 .menu:hover {
-    box-shadow: 0 0 24px #ffffff4f;
+    background-color: var(--box-color);
+
+    border: rgba(0, 0, 0, 0.4) solid 4px;
 }
+
+/* ------------------------------------ Contador de dias ------------------------------------ */
+
+.day-count {
+    text-align: center;
+    margin-bottom: 10vw;
+    line-height: 4vw;
+
+    background:#050a0c;
+
+    border: #ffffff outset;
+
+    border-radius: 32px;
+}
+
+.day-count p {
+    font-size: 1.5vw;
+}
+
 
 /* ------------------------------------ Geral ------------------------------------ */
