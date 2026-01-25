@@ -8,50 +8,36 @@
   <link rel="icon" href="icon.png">
 </head>
 
-<script>
-  function diasDesde(dataTexto) {
-    // Separa dia, mês e ano da string "DD/MM/YYYY"
-    const partes = dataTexto.split("/");
-
-    const dia = Number(partes[0]);
-    const mes = Number(partes[1]) - 1; // meses começam em 0
-    const ano = Number(partes[2]);
-
-    // Cria a data inicial
-    const dataInicial = new Date(ano, mes, dia);
-
-    // Data atual
-    const hoje = new Date();
-
-    // Diferença em milissegundos
-    const diferencaMs = hoje - dataInicial;
-
-    // Converte milissegundos para dias
-    const dias = Math.floor(diferencaMs / (1000 * 60 * 60 * 24));
-
-    return dias;
-  }
-</script>
-
 <body>
   <div class="log">
 
     <div class="day-count">
-      <P id="day-count"></P>
+      <P>31 Dias de produção.<br>Projeto finalizado com sucesso!</P>
+    </div>
+
+    <div class="download-box">
+      <p>Seção de downloads</p>
+      <div>
+        <a href="https://download1654.mediafire.com/ucoghjvrq3sgjrDtqUtqIAo1nr3UmScP7U1anwbyPvFtgS0GmYW3LRm8gg81boggDg48imKma9b6omRma4sOCO14-vItN-dXYTFRkpcZjAovMnedbcANibS1hxajuD-XIq2vgCPiQfDD1f-G-4hLmMP95db1MWVH682kaKCH7mvKFaWy/5bcw9f4s36904to/Insanebombs.zip"><button>Windows</button></a>
+        <a href=""><button>Android</button></a>
+      </div>
     </div>
 
     <p><strong>18/01/2026</strong><br>
-    Terminei o level design do ato 2.<br><br>
-    Fiz um novo sprite para a bomba lançada pelo jogador.<br><br>
-    Apliquei um simples efeito de iluminação no fogo.<br><br><br>
-    Atualmente ainda tenho 5 dias e só falta fazer o ato 3, além de bastante polimento. Nada que algumas noites mal dormidas não resolvam...</p>
+      Terminei o level design do ato 2.<br><br>
+      Fiz um novo sprite para a bomba lançada pelo jogador.<br><br>
+      Apliquei um simples efeito de iluminação no fogo.<br><br><br>
+      Atualmente ainda tenho 5 dias e só falta fazer o ato 3, além de bastante polimento. Nada que algumas noites mal
+      dormidas não resolvam...</p>
 
     <p><strong>17/01/2026</strong><br>
-    Otimizei bastante o medidor que havia feito ontem com apenas uma linha de código:<br>
-    graças à função surface_free() do GameMaker, que permite
-    remover uma surface (local onde os sprites e formas são desenhados) da VRAM (memória da placa de vídeo), sem isso a VRAM fica cheia, resultando em fps quase 75% mais baixo e travamentos na hora
-    de carregar seções, mas mesmo assim, esse sistema que fiz e relativamente complexo e como quero que esse jogo seja ascessível até para quem joga em air fryer, futuramente irei adicionar outras otimizações.br<br><br>
-    Terminei o level design da primeira parte do ato 2.</p>
+      Otimizei bastante o medidor que havia feito ontem com apenas uma linha de código:<br>
+      graças à função surface_free() do GameMaker, que permite
+      remover uma surface (local onde os sprites e formas são desenhados) da VRAM (memória da placa de vídeo), sem isso
+      a VRAM fica cheia, resultando em fps quase 75% mais baixo e travamentos na hora
+      de carregar seções, mas mesmo assim, esse sistema que fiz e relativamente complexo e como quero que esse jogo seja
+      ascessível até para quem joga em air fryer, futuramente irei adicionar outras otimizações.br<br><br>
+      Terminei o level design da primeira parte do ato 2.</p>
 
     <img style="display: flex; justify-self: center;" src="imgs/cooldown_metter.png" alt="medidor">
 
@@ -164,7 +150,10 @@
       e fiz uma tela de título muito badass com uma intro em vídeo (acho que ninguém vai fazer ideia disso
       se não olhar nos arquivos)
       e comecei a produzir uma UI (Interface de Usuário).</p>
-    <a href="imgs/1st_title.jpg"><img src="imgs/1st_title.jpg" alt="tela de título muito maneira"></a>
+
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/x5GnNWLx-nw?si=DB1csiNU4vLCadPA" allowfullscreen></iframe>
+    </div>
 
     <p><strong>02/01/2026</strong><br>Countinuo a fazer o level design, não aguento mais!
       Por que que fazer fases em jogos feitos para isso como Super Mario Maker é legal, mas construir as fases do meu
@@ -173,10 +162,6 @@
     <p><strong>23/12/2025</strong><br> Início do projeto...</p>
   </div>
 </body>
-
-<script>
-  document.getElementById("day-count").innerText = (diasDesde("23/12/2025") + " dias de projeto...\n"+(Math.abs((diasDesde("23/01/2026"))))+" dias para a gamejam finalizar...");
-</script>
 
 <div class="side-menu">
   <a href="https://www.youtube.com/@AyslanNuness" target="_blank" aria-label="YouTube Channel">
